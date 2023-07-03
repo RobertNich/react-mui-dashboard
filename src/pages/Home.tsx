@@ -43,19 +43,12 @@ export const Home = () => {
           minHeight: 360,
         }}
       >
-        <Typography variant="h4">Sample Header</Typography>
-        <Typography variant="body1">
-          A sample of a sentence or a collection of words.
+        <Typography
+          variant="h2"
+          style={{ marginBottom: 20, textAlign: "left" }}
+        >
+          Data Grid
         </Typography>
-        <Box style={{ height: 20 }} />
-        <Typography>it's {sideBarOpen ? "open" : "closed"}</Typography>
-        <Button onClick={() => clickFn()}>SideBar Button</Button>
-        <Typography>it's {darkMode ? "dark" : "light"}</Typography>
-        <Button onClick={() => darkFn()} style={{ marginBottom: 40 }}>
-          Dark Button
-        </Button>
-
-        <Typography style={{ marginBottom: 20 }}>Data Grid</Typography>
         <DataGrid data={testData.items}>
           <DataCurrency header="ya mum">amount</DataCurrency>
           <DataDate format="DD/MM/YY HH:mm">deadline</DataDate>

@@ -1,12 +1,20 @@
-import { IconButton, Divider, Stack, Box, useTheme } from "@mui/material";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import logo from "../../assets/images/yb-logo.png";
+import {
+  IconButton,
+  Divider,
+  Stack,
+  Box,
+  useTheme,
+  Typography,
+  Menu,
+  MenuItem,
+} from "@mui/material";
+import { FaChevronLeft, FaChevronRight, FaClock } from "react-icons/fa";
 import { useAtom } from "jotai";
 import { isDarkModeAtom } from "../../services/UiService";
 import { ThemeSwitch } from "./ThemeSwitch";
 import { Drawer } from "./SideBar.styles";
 import { SideBarItems } from "./SideBarItems";
+import { TimezoneButton } from "./TimezoneButton";
 
 interface IProps {
   open: boolean;
@@ -42,11 +50,9 @@ export const SideBar = ({
         <Stack
           direction={open ? "row" : "column"}
           alignItems="center"
-          justifyContent={open ? "space-between" : ""}
+          justifyContent={"space-evenly"}
         >
-          <Link to="/home">
-            <h1>Home</h1>
-          </Link>
+          <TimezoneButton />
           <ThemeSwitch
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setDarkMode(e.target.checked)

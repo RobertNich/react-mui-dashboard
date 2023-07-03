@@ -7,7 +7,6 @@ import {
   Stack,
   useTheme,
 } from "@mui/material";
-import { useAtom } from "jotai";
 import { useTranslation } from "react-i18next";
 import {
   FaAddressCard,
@@ -27,7 +26,6 @@ import {
   FaMailBulk,
   FaMoneyBillWave,
   FaShareSquare,
-  FaSignOutAlt,
   FaTags,
   FaTicketAlt,
   FaTrophy,
