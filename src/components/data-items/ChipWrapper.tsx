@@ -1,5 +1,5 @@
 import { Chip } from "@mui/material";
-import { ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 import { MuiChipVariant, MuiChipColor } from "../../types/Common";
 
 type ChipWrapperType = {

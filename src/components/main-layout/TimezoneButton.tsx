@@ -26,7 +26,6 @@ export const TimezoneButton = () => {
     <>
       <Button
         variant="text"
-        sx={{ color: "white" }}
         startIcon={<FaClock />}
         size="small"
         onClick={handleClick}

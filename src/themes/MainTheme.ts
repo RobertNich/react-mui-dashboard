@@ -67,12 +67,8 @@ export const lightTheme = createTheme({
   palette: {
     mode: "light",
     background: {
-      default: "#fafafa",
-    },
-    release: {
-      dev: blue.A200,
-      stg: red.A200,
-      prod: green.A200,
+      default: "#dee4e7",
+      paper: "#fff",
     },
   },
   components: {
@@ -94,12 +90,8 @@ export const darkTheme = createTheme({
   palette: {
     mode: "dark",
     background: {
-      default: "#1f1f1f",
-    },
-    release: {
-      dev: blue[900],
-      stg: red[900],
-      prod: green[900],
+      default: "#1f1c35",
+      paper: "#353349",
     },
   },
   components: {
@@ -111,21 +103,3 @@ export const darkTheme = createTheme({
     fontFamily: "NoirPro, sans-serif",
   },
 });
-
-declare module "@mui/material/styles" {
-  interface Palette {
-    release: {
-      dev: string;
-      stg: string;
-      prod: string;
-    };
-  }
-
-  interface PaletteOptions {
-    release?: {
-      dev: string;
-      stg: string;
-      prod: string;
-    };
-  }
-}
