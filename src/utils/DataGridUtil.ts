@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { ReactElement } from "react";
 
 export function getColumnTitle(data: ReactElement) {
-  const { t } = useTranslation();
   if (data) {
     let columnHeading = data.props.header
       ? data.props.header
@@ -13,13 +12,19 @@ export function getColumnTitle(data: ReactElement) {
       columnHeading = lastWord !== null ? lastWord[0] : data.props.children;
     }
 
-    columnHeading = t(columnHeading);
-
-    columnHeading = columnHeading.replace(/_|-|\./gm, " ");
-    columnHeading = columnHeading.replace(/\b(\w)/gm, (firstLetter: string) =>
-      firstLetter.toUpperCase()
-    );
+    columnHeading = formatAndLocalise(columnHeading);
 
     return columnHeading;
   } else return "unknown heading";
+}
+
+export function formatAndLocalise(data: any) {
+  const { t } = useTranslation();
+  let text = t(data);
+  text = text.replace(/_|-|\./gm, " ");
+  text = text.replace(/\b(\w)/gm, (firstLetter: string) =>
+    firstLetter.toUpperCase()
+  );
+
+  return text;
 }

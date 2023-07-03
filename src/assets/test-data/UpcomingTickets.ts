@@ -1,4 +1,6 @@
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+dayjs.extend(utc);
 
 const randomInt = (max: number) => {
   return Math.floor(Math.random() * max);
@@ -47,17 +49,31 @@ const randomTickets = () => {
   const randomHours = randomInt(5);
   const randomMinutes = randomInt(59);
   const randomAgent = randomInt(agents.length);
+  const randomStatus = randomInt(4);
 
   const ticket_id = randomInt(10000);
   const priority_level = randomHours + 1;
+  const created_date = dayjs
+    .utc()
+    .subtract(randomHours, "hours")
+    .subtract(randomMinutes, "minutes");
   const deadline = dayjs
     .utc()
     .add(randomHours, "hours")
     .add(randomMinutes, "minutes");
   const assigned_agent = agents[randomAgent].name;
   const agent_id = agents[randomAgent].id;
+  const ticket_status = randomStatus + 1;
 
-  return { ticket_id, priority_level, deadline, assigned_agent, agent_id };
+  return {
+    ticket_id,
+    priority_level,
+    created_date,
+    deadline,
+    assigned_agent,
+    agent_id,
+    ticket_status,
+  };
 };
 
 export const upcomingTickets = Array.from({ length: 10 }, () =>
