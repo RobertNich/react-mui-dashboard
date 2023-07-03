@@ -11,16 +11,16 @@ import {
   Typography,
 } from "@mui/material";
 import _ from "lodash";
-import { ReactElement, ReactNode, useState } from "react";
-import { newGetColumnTitle } from "../../utils/DataGridUtil";
+import { ReactElement, useState } from "react";
+import { getColumnTitle } from "../../utils/DataGridUtil";
 import React from "react";
-import { DataFunction } from "../DataItems/DataFunction";
+import { DataFunction } from "../data-items/DataFunction";
 
 interface IProps {
   data: any;
   children: ReactElement[];
 }
-export const NewDataGrid = ({ data, children }: IProps) => {
+export const DataGrid = ({ data, children }: IProps) => {
   const [orderDirection, setOrderDirection] = useState<any>("asc");
   const [functionToOrderBy, setFunctionToOrderBy] = useState<
     ((row: any) => any) | null
@@ -109,7 +109,7 @@ export const NewDataGrid = ({ data, children }: IProps) => {
               const actualColumn = column.props.wrapper
                 ? column.props.children
                 : column;
-              const columnHeading = newGetColumnTitle(actualColumn);
+              const columnHeading = getColumnTitle(actualColumn);
               return (
                 <TableCell key={columnHeading}>
                   <TableSortLabel

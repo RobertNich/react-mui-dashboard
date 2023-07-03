@@ -1,0 +1,142 @@
+export const testData = {
+  items: [
+    {
+      amount: 1523000,
+      event_id: 300,
+      display_description: "Win-Draw-Win",
+      display_title: "Athletic Bilbao v Osasuna",
+      deadline: "2023-01-09T20:00:00.000Z",
+      wager_status_id: 4,
+      blob: { odds: 1.23 },
+      wager_options: [
+        {
+          wager_id: 23,
+          description: "Athletic Bilbao",
+          blob: { back_or_lay: 1 },
+          wager_option_status_id: 2,
+        },
+        {
+          wager_id: 23,
+          description: "NOT: Athletic Bilbao",
+          blob: { back_or_lay: 2 },
+          wager_option_status_id: 3,
+        },
+      ],
+    },
+    {
+      amount: 53600,
+      event_id: 349,
+      display_description: "Total Goals",
+      display_title: "PSG v Liverpool",
+      deadline: "2023-03-12T23:21:00.000Z",
+      wager_status_id: 4,
+      blob: { odds: 2.23 },
+      wager_options: [
+        {
+          wager_id: 29,
+          description: "Over 1.5 Goals",
+          blob: { back_or_lay: 1 },
+          wager_option_status_id: 3,
+        },
+        {
+          wager_id: 29,
+          description: "NOT: Over 1.5 Goals",
+          blob: { back_or_lay: 2 },
+          wager_option_status_id: 2,
+        },
+      ],
+    },
+    {
+      amount: 6000,
+      event_id: 349,
+      display_description: "Salamander",
+      display_title: "PSG v Liverpool",
+      deadline: "2023-03-09T20:00:00.000Z",
+      wager_status_id: 4,
+      blob: { odds: 2.23 },
+      wager_options: [
+        {
+          wager_id: 29,
+          description: "Over 1.5 Goals",
+          blob: { back_or_lay: 1 },
+          wager_option_status_id: 3,
+        },
+        {
+          wager_id: 29,
+          description: "NOT: Over 1.5 Goals",
+          blob: { back_or_lay: 2 },
+          wager_option_status_id: 2,
+        },
+      ],
+    },
+    {
+      amount: 8813600,
+      event_id: 349,
+      display_description: "Tally",
+      display_title: "PSG v Liverpool",
+      deadline: "2023-03-09T20:00:00.000Z",
+      wager_status_id: 4,
+      blob: { odds: 2.23 },
+      wager_options: [
+        {
+          wager_id: 29,
+          description: "Over 1.5 Goals",
+          blob: { back_or_lay: 1 },
+          wager_option_status_id: 3,
+        },
+        {
+          wager_id: 29,
+          description: "NOT: Over 1.5 Goals",
+          blob: { back_or_lay: 2 },
+          wager_option_status_id: 2,
+        },
+      ],
+    },
+    {
+      amount: 93600,
+      event_id: 349,
+      display_description: "Umberellaa",
+      display_title: "PSG v Liverpool",
+      deadline: "2023-01-09T17:00:00.000Z",
+      wager_status_id: 4,
+      blob: { odds: 2.23 },
+      wager_options: [
+        {
+          wager_id: 29,
+          description: "Over 1.5 Goals",
+          blob: { back_or_lay: 1 },
+          wager_option_status_id: 2,
+        },
+        {
+          wager_id: 29,
+          description: "NOT: Over 1.5 Goals",
+          blob: { back_or_lay: 2 },
+          wager_option_status_id: 3,
+        },
+      ],
+    },
+    {
+      amount: 3600,
+      event_id: 349,
+      display_description: "Salb",
+      display_title: "PSG v Liverpool",
+      deadline: "2023-01-09T20:30:00.000Z",
+      wager_status_id: 4,
+      blob: { odds: 2.23 },
+      wager_options: [
+        {
+          wager_id: 29,
+          description: "Over 1.5 Goals",
+          blob: { back_or_lay: 1 },
+          wager_option_status_id: 3,
+        },
+        {
+          wager_id: 29,
+          description: "NOT: Over 1.5 Goals",
+          blob: { back_or_lay: 2 },
+          wager_option_status_id: 2,
+        },
+      ],
+    },
+  ],
+};
