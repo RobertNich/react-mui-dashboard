@@ -1,14 +1,5 @@
-import {
-  IconButton,
-  Divider,
-  Stack,
-  Box,
-  useTheme,
-  Typography,
-  Menu,
-  MenuItem,
-} from "@mui/material";
-import { FaChevronLeft, FaChevronRight, FaClock } from "react-icons/fa";
+import { IconButton, Divider, Stack, Box, useTheme } from "@mui/material";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useAtom } from "jotai";
 import { isDarkModeAtom } from "../../services/UiService";
 import { ThemeSwitch } from "./ThemeSwitch";
@@ -29,7 +20,7 @@ export const SideBar = ({
   drawerWidthClosed,
   handleDrawer,
 }: IProps) => {
-  const [, setDarkMode] = useAtom(isDarkModeAtom);
+  const [darkMode, setDarkMode] = useAtom(isDarkModeAtom);
   const theme = useTheme();
 
   return (
@@ -44,7 +35,6 @@ export const SideBar = ({
         sx={{
           width: "100%",
           height: "100%",
-          backgroundColor: theme.palette.release.stg,
         }}
       >
         <Stack
@@ -54,6 +44,7 @@ export const SideBar = ({
         >
           <TimezoneButton />
           <ThemeSwitch
+            checked={darkMode}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setDarkMode(e.target.checked)
             }
