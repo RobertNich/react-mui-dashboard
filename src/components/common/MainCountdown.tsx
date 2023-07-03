@@ -30,8 +30,8 @@ export const MainCountdown = ({ time }: MainCountdown) => {
       return <Typography>Over</Typography>;
     }
 
-    if (hours < 2 && hours > 0) {
-      setColor(theme.palette.warning.dark);
+    if (hours === 3) {
+      setColor(theme.palette.primary.main);
       return (
         <Typography>
           {hours}:{zeroPad(minutes)}:{zeroPad(seconds)}
@@ -39,7 +39,25 @@ export const MainCountdown = ({ time }: MainCountdown) => {
       );
     }
 
-    if (hours <= 0 && minutes > 0) {
+    if (hours === 2) {
+      setColor(theme.palette.secondary.main);
+      return (
+        <Typography>
+          {hours}:{zeroPad(minutes)}:{zeroPad(seconds)}
+        </Typography>
+      );
+    }
+
+    if (hours === 1) {
+      setColor(theme.palette.warning.main);
+      return (
+        <Typography>
+          {hours}:{zeroPad(minutes)}:{zeroPad(seconds)}
+        </Typography>
+      );
+    }
+
+    if (hours === 0 && minutes > 0) {
       setColor(theme.palette.error.main);
       return (
         <Typography>
@@ -52,7 +70,7 @@ export const MainCountdown = ({ time }: MainCountdown) => {
       setColor(theme.palette.error.main);
       return <Typography>{zeroPad(seconds)}s</Typography>;
     } else {
-      setColor(theme.palette.primary.main);
+      setColor(theme.palette.success.main);
       return (
         <Typography>
           {hours}:{zeroPad(minutes)}:{zeroPad(seconds)}
