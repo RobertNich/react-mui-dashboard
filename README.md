@@ -25,7 +25,11 @@ return (
   </Datagrid>
 )
 ```
+#### - Custom Components
+There are also a lot of different ways you want to display and use data in a datagrid so I added some components to automatically format for those cases:
+```
 
+```
 
 ## Running Locally
 - Install dependencies
