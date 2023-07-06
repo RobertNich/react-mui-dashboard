@@ -80,6 +80,9 @@ return (
 
 `<ChipWrapper/>` - Adds a chip around any of the previous components, you can set the variant and colour via the props.
 
+### - Reusable components
+All the components listed above do not need the datagrid to work. They all take an optional prop of `data` which can be used to manually pass data in.
+Perhaps in the future, I will add a <DataCard /> component which will act sort of like a datagrid by passing the data to a collection of components but laying out the information in a card style.
 
 ## Running Locally
 - npm i
