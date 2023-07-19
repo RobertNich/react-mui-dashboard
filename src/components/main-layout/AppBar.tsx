@@ -1,7 +1,6 @@
-import { Toolbar, Typography } from "@mui/material";
+import { Toolbar } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
-import { useTranslation } from "react-i18next";
 
 interface IProps {
   open: boolean;
@@ -37,15 +36,9 @@ export const AppBar = ({
     }),
   }));
 
-  const { t } = useTranslation();
-
   return (
     <AppBar position="fixed" open={open as boolean}>
-      <Toolbar>
-        <Typography variant="h3" noWrap component="div">
-          {t("language")}
-        </Typography>
-      </Toolbar>
+      <Toolbar></Toolbar>
     </AppBar>
   );
 };
