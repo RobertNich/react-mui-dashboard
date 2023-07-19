@@ -18,6 +18,8 @@ type Props = {
   helpText: string;
 };
 
+// Need to change other search components to handle onChange in the pages itself instead of the component directly
+
 export const SelectItem = ({ label, options, helpText }: Props) => {
   const [input, setInput] = useState("");
 
