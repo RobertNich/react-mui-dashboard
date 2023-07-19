@@ -1,6 +1,8 @@
 import { Autocomplete, CircularProgress, TextField } from "@mui/material";
 import { useState } from "react";
 
+// Need to change other search components to handle onChange in the pages itself instead of the component directly
+
 type Props = {
   label: string;
   data: any[];
